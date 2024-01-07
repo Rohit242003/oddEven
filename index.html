@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<tittle> </tittle>
+
+		<style>
+			*{ font-size:50px ; font-family:Century;}
+			h1{ background-color:black; color:white; width:50%; border-radius:30px;}
+			.nav{ background-color:black; border-radius:20px;}
+			.nav a{ color:white; text-decoration:none; margin:10%;}
+			
+		</style>
+		<script>
+			function find()
+			{
+				event.preventDefault();
+				let num =document.getElementById("num");
+				
+				let msg = document.getElementById("msg");
+				let n = parseInt(num.value);
+				if(n%2==0)
+				
+					msg.innerHTML = "even";
+				else
+					msg.innerHTML = "odd";
+			}
+		</script>
+	</head>
+	<body>
+        <center>
+		<div class ="nav">
+			<a href="index.html"> Home </a>
+			<a href="about.html"> about </a>
+		</div>
+		<h1> Odd-Even Finder</h1>
+		<form onsubmit="find()">
+			<input type="number" placeholder="enter Number" id="num"/>
+			<br><br>
+			<input type="submit" value="Submit" />
+		</form>
+		<h2 id="msg"/>
+	</center>
+	</body>
+</html>
